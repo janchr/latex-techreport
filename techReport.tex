@@ -1,0 +1,340 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{techReport} % Document font size and equations flushed left
+
+\usepackage[german, english]{babel} % Specify a different language here - english by default
+
+\usepackage{lmodern}  % Zur besseren Darstellung der Sonderzeichen
+\usepackage{textcomp} % Zur Nutzung von Sonderzeichen wie '°'
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+%\definecolor{color2}{RGB}{0,0,250} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{
+    hidelinks,              % hide links (removing color and border) 
+    colorlinks=false,       % surround the links by color frames (false) or colors the text of the links (true)
+    breaklinks=true,        %
+    % bookmarks=true,         % show bookmarks bar?
+    bookmarksopen=false,    % 
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Title}        % title
+    pdfauthor={Author},     % author
+%    pdfsubject={Subject},   % subject of the document
+%    pdfcreator={Creator},   % creator of the document
+%    pdfproducer={Producer}, % producer of the document
+%    pdfkeywords={keyword1, key2, key3}, % list of keywords
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=color1,       % color of internal links (change box color with linkbordercolor)
+    citecolor=color1,       % color of links to bibliography
+    filecolor=color2,       % color of file links
+    urlcolor=color2         % color of external links
+}
+
+%----------------------------------------------------------------------------------------
+%	TABLES
+%----------------------------------------------------------------------------------------
+
+% The following two lines are used to allow the H option 
+\usepackage{float}
+\restylefloat{table}
+%\usepackage{tabularx}
+%\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{My Magazine, Development Stuff, No. 1, 2023} % Journal information
+\Archive{>>Open Mind<<} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Titel} % Article title
+
+\Authors{Me\textsuperscript{1}*} % Authors
+\affiliation{\textsuperscript{1}\textit{Me, Street 1, City, Country}} % Author affiliation
+\affiliation{*\textbf{Corresponding author}: me@me.com} % Corresponding author
+
+\Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{
+Leeres Abstract
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+\tableofcontents % Print the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Einleitung} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+
+Leere Einleitung!
+
+%------------------------------------------------
+
+\section{Sec. 1}
+
+ABC
+
+\subsection{SubSec. 1.1}
+
+\href{https://duckduckgo.com}{duckduckgo.com}
+
+\subsubsection*{SubSubSec 1.1.1}
+
+ABC
+
+\begin{itemize}
+\item A
+\item B
+\end{itemize}
+
+ABC
+
+\subsection{SubSec 1.2}
+
+ABC
+
+\begin{description}
+\item[O-Anordnung:]
+ABC
+
+\item[X-Anordnung:]
+ABC
+\end{description}
+
+ABC
+
+\begin{description}
+\item[Gerollt:]
+ABC
+
+\item[Gewirbelt:]
+ABC
+
+\item[Geschliffen:]
+ABC
+\end{description}
+
+ABC
+
+\subsubsection*{SubSubSec 1.2.1}
+
+ABC
+
+\begin{description}
+\item f = 1,0   (Motor - Festlager - Festlager)
+\item f = 0,692 (Motor - Festlager - Loslager)
+\item f = 0,446 (Motor - Loslager - Festlager)s
+\item f = 0,147 (Motor - Festlager - ungelagert)
+\end{description}
+
+\paragraph*{Latex-Drehzahl}
+
+ABC
+
+\begin{description}
+\item f = 1,0 (Motor - Festlager - Festlager)
+\item f = 0,5 (Motor - Festlager - Loslager)
+\item f = 0,25 (Motor - Loslager - Festlager)
+\item f = 0,0625 (Motor - Festlager - ungelagert)
+\end{description}
+
+\begin{equation}
+f = 4,072*10^5*\left(\frac{f*d^4}{l^2}\right)
+\end{equation}
+
+\paragraph*{Latex-Knicklast}
+
+Die maximale Knicklast beträgt 50\% der kritischen. Da hier in der Regel Kräfte im kN-Bereich berechnet werden, spielt die Knicklast als Druchmesser-Beschränkung zumeist eine untergeordnete Rolle.
+
+\subsubsection*{Steigung:}
+
+ABC
+
+\subsubsection*{Mutter:}
+
+ABC
+
+\subsubsection*{Lagerung:}
+
+ABC
+
+\section{Sec 2}
+
+%----------------------------------------------------------------------------------------
+% TABLE ENVIRONMENT
+%----------------------------------------------------------------------------------------
+% \begin{table}[Position]
+% Position: (optional) eine Kombination von b, h, p und t (Default: tbp)
+% b = Unterer Rand einer Seite
+% t = Oberer Rand einer Seite
+% h = Versucht die Tabbele an die Stelle zu platzieren, an der die Tabelle definiert wurde. Wenn die Tabelle zu groß für den vorhandenen Platz ist, wird sie am obereren Rand der Seite platziert.
+% H = Exakt an die Stelle an der die Tabelle definiert wurde
+% p = Platzierung auf eigener Seite (ggfs. zusammen mit weiteren Tabellen)
+% ! = Überschreibt die internen Parameter die LaTeX für eine gute autopositionierung hält
+%
+% Hinweis: Die *-Variante der Umgebung sorgt bei zweispaltigem Textsatz dafür, daß die Tabelle über beide Spalten hinweg Platz einnimmt.
+\begin{table}[H]
+%\centering
+%----------------------------------------------------------------------------------------
+% SPALTEN
+%----------------------------------------------------------------------------------------
+%    @{Text} Damit wird eine Spalte erstellt bei der in jeder Zeile automatisch der Eintrag Text steht. 
+%    p{Breite} Damit wird eine Spalte mit fester beziehungsweise vorgegebener Breite erzeugt. Im Fall, dass der Text innerhalb einer Zelle, dieser Spalte, zu lang ist wird er automatisch umgebrochen. Für den Fall, dass ein Zeilenumbruch manuell gesetzt werden soll muss dieser mit dem \newline Befehl gesetzt werden.
+%    Das Pipezeichen | zieht einen vertikalen Linie an der gegebenen Spaltenposition über die gesamte Höhe der Tabelle
+%    \begin{tabular}{|l|c|r|p{1.5cm}|@{ Spalte 5 }|}
+%    Wiederholung des selben Spaltentyps: \begin{tabular}{*{Anzahl n}{Spaltentyp}} --> Bsp: \begin{tabular}{*{3}{p{2cm}}}
+
+%----------------------------------------------------------------------------------------
+% ZEILEN
+%----------------------------------------------------------------------------------------
+%    Mit dem Kaufmanns-Und & werden innerhalb einer Zeile die einzelnen Spalten voneinander getrennt.
+%    Der Befehl \hline erstellt eine horizontale Linie über die gesamte Breite der Tabelle. Wird er vor der Zeile geschrieben ergibt sich eine Linie über der Zeile, wird er danach geschrieben erhält man eine Linie darunter.
+%    Mit dem Befehl \cline{i-j} wird eine horizontale Linie von Spalte i bis Spalte j gezogen.
+%    Mit \multicolumn{Anzahl n}{Ausrichtung}{Inhalt} werden n Spalte (innerhalb einer Zeile) zu einer neuen Zelle zusammengefasst. Die Ausrichtung der Zell kann l, c, r oder p{Breite} sein. In dieser neuen Zelle wird dann der Inhalt gesetzt.
+%    Mit \vline wird ein vertikale Linie über die Höhe der Zeile in der der Befehl steht erstellt.
+%%%%%
+\begin{tabular}{|l|c|c|}
+\hline
+ & $k_{c1.1}$ & $m_c$ \\
+\hline
+Automatenstahl & 1500 & 0,22 \\
+\hline
+Werkzeugstahl & 1900 & 0,24 \\
+\hline
+Legierter Guss & 1350 & 0,28 \\
+\hline
+Mesing & 700 & 0,25 \\
+\hline
+Bronze & 700 & 0,27 \\
+\hline
+Titan & 1450 & 0,23 \\
+\hline
+\end{tabular}
+% \caption[Kurzeintrag für das Tabellenverzeichnis]{Im Text sichtbare Beschreibung}
+\caption[spezifische Schnittkraft und Steigungswert]{Daten zu spezifischer Schnittkraft $k_{c1.1}$ und Steigungswert $m_c$ für verschiedene Werkstoffe.}
+\label{tab:}
+\end{table}
+
+\noindent
+Die spezifische Schnittkraft $k_{c1.1}$ und der Spanungsdickenexponent $m_c$ sind abhängig vom eingesetzten Bauteilwerkstoff. Beide Parameter liegen in Tabellenwerken vor, und müssen nur für das entsprechende Material herausgesucht werden (siehe Tabelle 1). Weiterhin benötigt man für die Berechnung der \textbf{Schneidkraft} $Fc$ nach der Kienzle Gleichung die \textbf{Spanungsbreite} $b$, die \textbf{Spanungsdicke} $h$ sowie den \textbf{Korrekturfaktor} $K$.
+
+\newpage 
+\subsection*{Berechnung des Korrekturfaktors K}
+
+$$K=K_{vc}*K_y*K_{sch}*K_{ver}$$
+
+\subsubsection*{Korrekturfaktor $K_{vc}$ für die Schnittgeschwindigkeit}
+    
+\begin{table}[H]
+%\centering
+\begin{tabular}{|c|c|}
+\hline
+Bei $v_c$ $<$ \textbf{20m/min} & Bei $v_c$ $<$ \textbf{20m/min} \\
+$K_{vc} = \left(\frac{100}{v_c}\right)^{0,1}$ & $K_{vc} = \frac{2,023}{v_c^{0,153}}$ \\
+\hline
+Bei $v_c$ $<$ \textbf{20m/min} & Bei $v_c$ $<$ \textbf{20m/min} \\
+$K_{vc} = 1$ & $K_{vc} = \frac{1,380}{v_c^{0,07}}$ \\
+\hline
+\end{tabular}
+\caption[Korrektursfaktor $K_{vc}$ bei unterschiedlichen Schnittgeschwindigkeiten]{Formeln zur Berechnung des Korrektursfaktors bei unterschiedlichen Schnittgeschwindigkeiten:}
+\label{tab:K_vc}
+\end{table}
+
+\subsubsection*{Korrekturfaktor $K_y$ für den Spanwinkel}
+
+$$K_y = 1 - \frac{y_{tat}-y_0}{100}$$
+
+\begin{itemize}
+\item[$y_tat$] Der tatsächlich am Werkzeug vorhandene Spannwinkel in Grad.
+\item[$y_0$] Basiswinkel in Grad (2 Grad bei Guss, 6 Grad bei Stahlbearbeitung.
+\end{itemize}
+
+\subsubsection*{Korrekturfaktor $K_{sch}$ für den Schneidwerkstoff}
+
+\begin{table}[H]
+%\centering
+\begin{tabular}{|l|l|}
+\hline
+$K_{sch}$ & Werkstoff \\
+\hline
+1,0 & VHM \\
+\hline
+1,2 & HSS \\
+\hline
+0,9 & Keramikschneidwerkstoff \\
+\hline
+\end{tabular}
+\caption[Korrekturfaktor $K_{sch}$]{Korrekturfaktor $K_{sch}$ für verschiedene Werkstoffe}
+\label{tab:K_sch}
+\end{table}
+    
+\subsubsection*{Korrekturfaktor $K_{ver}$ für den Verschleiß}
+
+\begin{table}[H]
+%\centering
+\begin{tabular}{|l|l|}
+\hline
+$K_{ver}$ & Werkzeugzustand \\
+\hline
+1,0 & neu \\
+\hline
+1,5 & verschlissen \\
+\hline
+\end{tabular}
+\caption[Korrekturfaktor $K_{ver}$]{Korrekturfaktor $K_{ver}$ bei verschiedenen Werkzeugzuständen}
+\label{tab:K_ver}
+\end{table}
+
+\subsection*{Spanungsdicke und Spanungsbreite}
+
+\begin{figure}[H]
+\centering
+\caption[Grafische Darstellung von Spanungsbreite und Spanungshöhe]{Grafische Darstellung von Spanungsbreite und Spanungshöhe.}
+\label{fig:Spanungsbreitte_hoehe}
+\end{figure}
+
+\end{document}
